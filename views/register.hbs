@@ -1,0 +1,21 @@
+{{>header}}
+
+    <form action="controller/validateRegister" method="post" class="container-register">
+        <h2>Cadastrar</h2>
+        <div class="container-inputs">
+                <p>Nome:</p>
+                <input type="text" name="name" placeholder="Digite seu nome" required />
+                <p>E-mail:</p>
+                <input type="email" name="email" placeholder="Digite seu email" required />
+                <p>Senha:</p>
+                <input type="password" name="password" id="password" required>
+                <p>Confirme sua senha:</p>
+                <input type="password" name="confirmPassword" id="" required>
+        </div>
+        <div class="container-buttons-form">
+            <button class="button-form">Register</button>
+            <a href="/login" class="button-link">Login</a>
+        </div>
+    </form>
+
+    {{>registerMsg}}

@@ -1,0 +1,15 @@
+{{#if registerMessageSuccess}}
+
+  <div class="message-success">
+    <h3>Cadastrado com sucesso!</h3>
+  </div>
+
+{{/if}}
+
+{{#each registerMessageError}}
+
+  <div class="message-error">
+    <p>{{registerMessage}}</p>
+  </div>
+
+{{/each}}

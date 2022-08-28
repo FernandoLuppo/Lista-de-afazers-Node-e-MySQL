@@ -1,0 +1,17 @@
+{{>header}}
+
+
+    <form action="controller/validateLogin" method="post" class="container-login">
+        <h2>Entre em sua lista</h2>
+        <p>E-mail:</p>
+        <input type="email" name="email" required />
+        <p>Senha:</p>
+        <input type="password" name="password" id="" required />
+        <div class="container-buttons-form">
+            <button class="button-form">Login</button>
+            <a href="/register" class="button-link">Register</a>
+        </div>
+    </form>
+    
+
+{{>loginMsg}}

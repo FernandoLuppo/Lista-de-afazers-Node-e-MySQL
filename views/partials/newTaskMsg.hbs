@@ -1,0 +1,15 @@
+{{#if newPostMessageSuccess}}
+
+  <div class="message-success">
+    <h3>Nova tarefa adicionada em sua lista</h3>
+  </div>
+
+{{/if}}
+
+{{#each newPostMessageError}}
+
+  <div class="message-error">
+    <p>{{newPostErrorsMessage}}</p>
+  </div>
+
+{{/each}}

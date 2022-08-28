@@ -1,0 +1,21 @@
+{{>header}}
+
+<nav  class="nav-newTask-page">
+    <a href="/newTask" class="button-new-item-new-page">Nova Tarefa</a>
+    <a href="/"><button class="button-home-new-page">Lista de Tarefas</button></a>
+    <form action="/logout" method="post">
+        <button class="button-logout">Sair</button>
+    </form>
+</nav>
+
+<form action="controller/validateNewTask" method="post" class="container-new-item">
+    <h3>Insira um novo item em sua lista</h3>
+    <p>Titulo</p>
+    <input type="text" name="title" id="" placeholder="Coloque um Titulo" required>
+    <p>Descrição</p>
+    <textarea name="task" id="" placeholder="Coloque uma Descrição" required></textarea>
+    <br>
+    <button>Salvar</button>
+</form>
+
+{{>newTaskMsg}}

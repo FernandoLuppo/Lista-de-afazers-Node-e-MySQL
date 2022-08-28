@@ -1,0 +1,63 @@
+{{>header}}
+
+<nav class="nav-list-page">
+  <a href="/newTask"><button class="button-new-item-list-page">Nova Tarefa</button></a>
+  <a href="/" class="button-home-list-page">Lista de Tarefas</a>
+  <form action="/logout" method="post">
+    <button class="button-logout">Sair</button>
+  </form>
+</nav>
+
+<h1 class="titule-list-page">Suas postagens!</h1>
+
+
+{{#if table}}
+
+{{#each userList}}
+<div class="container-list" id="{{id}}">
+    <h3>{{title}}</h3>
+    <label for="">
+        <input type="checkbox">
+        <p>{{task}}</p>
+    </label>
+    <div class="container-button-list-page">
+        <button class="button-excluir-list-page" data-bs-toggle="modal" data-bs-target="#deleteModal_{{id}}">Excluir</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal_{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body fw-bold">
+        Tem certeza que deseja excluir essa tarefa?
+      </div>
+      <div class="modal-body fw-bold text-danger">
+        {{title}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <form action="/delete" method="post">
+          <input type="hidden" name="id" value="{{id}}">
+          <button type="submit" class="btn btn-danger">Deletar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+{{else}}
+
+<div class="container-list">
+    <h3>Não há nenhuma tarefa em sua lista</h3>
+</div>
+
+{{/if}}
+
+
+
