@@ -289,8 +289,18 @@ nav {
 }
 
 @media (max-width: 600px) {
+  .container-new-item {
+    margin-bottom: 20px;
+  }
+
+  .container-new-item > input {
+    width: 280px;
+    padding: 5px;
+    margin-bottom: 30px;
+  }
+
   .container-new-item > textarea {
-    width: 325px;
+    width: 280px;
     height: 200px;
   }
 }
